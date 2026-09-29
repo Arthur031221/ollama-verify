@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ollama-verify"
+version = "0.1.0"
+description = "Read-only integrity and storage audit for local Ollama models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Arthur031221"}]
+dependencies = []
+
+[project.scripts]
+ollama-verify = "ollama_verify.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ollama_verify*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
