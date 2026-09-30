@@ -89,6 +89,12 @@ ollama-verify scan --verify --max-hash-bytes 1073741824 --json > audit.json
 - Unknown files in `blobs/` are ignored. The orphan total counts only valid `sha256-<digest>` file names.
 - A manifest or blob symlink is reported and never followed.
 
+## Related projects
+
+- [llm-doctor](https://github.com/Arthur031221/llm-doctor): Broader diagnosis of duplicate weights and stale templates. ollama-verify is a narrower, read-only integrity check on the same Ollama store.
+- [gpuwho](https://github.com/Arthur031221/gpuwho): For when the question is not whether your models are intact but which process is using the GPU right now.
+- [gpuwait](https://github.com/Arthur031221/gpuwait): Measures how idle the GPU sits while a verified model actually serves requests.
+
 ## Contributing and license
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). MIT, copyright 2026 Arthur.
